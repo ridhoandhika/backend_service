@@ -1,0 +1,31 @@
+#get all users
+GET http://127.0.0.1:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImUxMWFkMWY5LTAxYzMtNGI1ZS1hMWUzLTRhNzEwZTYwN2E1YyIsImlhdCI6MTY5MTgzNDQwOCwiZXhwIjoxNjkxODM4MDA4fQ.XxXHOIBXaJHhPIEy2g_LipV6pU6XwCS4nh5-4fNZBQ8
+###
+#get user by id
+GET http://127.0.0.1:3000/users/e11ad1f9-01c3-4b5e-a1e3-4a710e607a5c
+
+###
+#create new user
+POST http://127.0.0.1:3000/users HTTP/1.1
+content-type: application/json
+
+{
+    "name": "ridho andhika",
+    "email": "ridhoandhikaa@gmail.com",
+    "password": "password"
+}
+
+###
+#update data user
+PUT http://127.0.0.1:3000/users/fc83dac8-6a54-4a67-b3d7-5a19b11b5e6d HTTP/1.1
+content-type: application/json
+
+{
+    "name": "ridho andhikaas"
+}
+
+###
+#delete data user by id
+DELETE http://127.0.0.1:3000/users/fc83dac8-6a54-4a67-b3d7-5a19b11b5e6d HTTP/1.1
+content-type: application/json
